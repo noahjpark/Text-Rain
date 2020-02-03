@@ -60,10 +60,12 @@ void draw() {
   if ((cam != null) && (cam.available())) {
     cam.read();
     inputImage.copy(cam, 0,0,cam.width,cam.height, 0,0,inputImage.width,inputImage.height);
+    mirrored = false; // Change back mirrored to false so that it flips properly at the beginning on the next draw call
   }
   else if ((mov != null) && (mov.available())) {
     mov.read();
     inputImage.copy(mov, 0,0,mov.width,mov.height, 0,0,inputImage.width,inputImage.height);
+    mirrored = false; // Change back mirrored to false so that it flips properly at the beginning on the next draw call
   }
   
   // Flip video so it acts like a mirror
@@ -179,7 +181,6 @@ void draw() {
          currentLetters--;
       }
   }
-  mirrored = false; // Change back mirrored to false so that it flips properly at the beginning on the next draw call
 }
 
 
