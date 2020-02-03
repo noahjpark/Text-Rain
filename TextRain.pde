@@ -1,5 +1,5 @@
 /**
-    CSci-4611 Assignment #1 Text Rain | Noah Park | park1623 | 5206465
+    Noah Park | Text Rain Implementation
 **/
 
 
